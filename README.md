@@ -29,3 +29,6 @@ npm i axios
 
 ## run json file
 json-server --watch db.json
+
+## install validation package
+npm i vuelidate
