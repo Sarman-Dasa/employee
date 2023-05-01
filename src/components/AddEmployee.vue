@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container form">
         <div class="row">
             <div class="col">
                 <ul>
@@ -8,17 +8,22 @@
                     </li>
                 </ul>
             </div>
+            <!-- <div class="col" v-if="$v.form.$error">
+                hello
+            </div> -->
         </div>
-        <div class="table mt-5 table-bordered">
+
+            <div class="table mt-5">
             <div class="row">
                 <div class="col text-bg-info text-center text-black p-2">
                     <label for="" class="form-label display-6" ref="header"> Add Employee </label>
-                   
                 </div>
             </div>
             <div class="row mt-3">
                 <div class="col">
-                    <input type="text" class="form-control" placeholder="Enter employee name" v-model="form.name">
+                    <input type="text"   class="form-control" placeholder="Enter employee name" v-model.trim="form.name" 
+                    @input="$v.form.name.$touch()">
+                    
                 </div>
                 <div class="col">
                     <input type="text" class="form-control" placeholder="Enter employee email" v-model="form.email">
@@ -64,11 +69,13 @@
                 </div>
             </div>
         </div>
+       
     </div>
 </template>
 
 <script>
 import axios from "axios"
+import { required } from "vuelidate/lib/validators";
 export default {
     name: "AddEmployee",
     data() {
@@ -83,8 +90,13 @@ export default {
                 add: true,
             },
             errors: []
-
         };
+    },
+    validations: {
+       form: {
+            name: { required },
+            email: { required },
+       }
     },
     methods: {
         formValidation() {
