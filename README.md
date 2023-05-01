@@ -22,3 +22,10 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+npm i vue-router@next
+nmp install bootstrap
+npm i axios
+
+## run json file
+json-server --watch db.json
