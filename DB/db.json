@@ -1,0 +1,31 @@
+{
+  "employees": [
+    {
+      "name": "sarman d",
+      "email": "sarmand@zignuts.com",
+      "phone": "7867568978",
+      "job": "laravel developer",
+      "gender": "Male",
+      "city": "Gandhinagar",
+      "id": 1
+    },
+    {
+      "name": "dharmik d",
+      "email": "dharmik@gmail.com",
+      "phone": "9878568990",
+      "job": "laravel",
+      "gender": "Male",
+      "city": "Rajkot",
+      "id": 2
+    },
+    {
+      "name": "deva",
+      "email": "deva@gmail.com",
+      "phone": "6787554567",
+      "job": "java ",
+      "gender": "Male",
+      "city": "Porbandar",
+      "id": 3
+    }
+  ]
+}
