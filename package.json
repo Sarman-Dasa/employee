@@ -11,6 +11,8 @@
     "axios": "^1.4.0",
     "bootstrap": "^5.2.3",
     "core-js": "^3.8.3",
+    "validator": "^13.9.0",
+    "vee-validate": "^3.4.15",
     "vue": "^3.2.13",
     "vue-router": "^4.0.13",
     "vuelidate": "^0.7.7"
