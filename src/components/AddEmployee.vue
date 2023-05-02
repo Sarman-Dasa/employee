@@ -21,8 +21,7 @@
             </div>
             <div class="row mt-3">
                 <div class="col">
-                    <input type="text"   class="form-control" placeholder="Enter employee name" v-model.trim="form.name" 
-                    @input="$v.form.name.$touch()">
+                    <input type="text"   class="form-control" placeholder="Enter employee name" v-model.trim="form.name" >
                     
                 </div>
                 <div class="col">
@@ -75,7 +74,6 @@
 
 <script>
 import axios from "axios"
-import { required } from "vuelidate/lib/validators";
 export default {
     name: "AddEmployee",
     data() {
@@ -91,12 +89,6 @@ export default {
             },
             errors: []
         };
-    },
-    validations: {
-       form: {
-            name: { required },
-            email: { required },
-       }
     },
     methods: {
         formValidation() {
